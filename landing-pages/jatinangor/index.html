@@ -1,39 +1,169 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delapan Computer Bandung | Jasa Service Laptop Profesional</title>
+  <title>BABACOM Bandung | Jasa Service Laptop Profesional</title>
   <style>
-    :root { --primary:#5b6ef5;--secondary:#7a5cff;--accent:#00d4ff;--bg:#f8faff;--dark:#1e1e2f;--light:#ffffff;}
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-    body{font-family:"Poppins",sans-serif;color:var(--dark);background-color:var(--bg);}
-    header{position:fixed;width:100%;background:rgba(255,255,255,.95);box-shadow:0 2px 10px rgba(0,0,0,.08);z-index:1000;}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;}
-    nav h1{font-size:1.6rem;font-weight:700;color:var(--primary);}
-    nav ul{display:flex;gap:1.5rem;list-style:none;}
-    nav a{text-decoration:none;color:var(--dark);font-weight:500;transition:.3s;}
-    nav a:hover{color:var(--primary);}
-    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;color:white;padding:2rem;
-      background:linear-gradient(to right,rgba(91,110,245,0.8),rgba(0,212,255,0.8)),
-      url('https://images.unsplash.com/photo-1581092795360-3e7b2cc4f3df?auto=format&fit=crop&w=1920&q=80')center/cover;}
-    .hero h2{font-size:2.8rem;margin-bottom:1rem;}
-    .hero p{max-width:700px;font-size:1.2rem;margin-bottom:2rem;}
-    .hero button{padding:.9rem 2rem;border:none;border-radius:30px;background:var(--accent);color:var(--dark);cursor:pointer;transition:.3s;}
-    .hero button:hover{background:white;}
-    section{padding:6rem 10%;}
-    .section-title{text-align:center;font-size:2rem;color:var(--primary);margin-bottom:2rem;font-weight:700;}
-    .about{display:flex;align-items:center;gap:3rem;flex-wrap:wrap;justify-content:center;}
-    .about img{width:400px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
-    .about p{max-width:600px;line-height:1.8;font-size:1.1rem;}
-    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:2rem;}
-    .service-item{background:white;padding:2rem;border-radius:15px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.1);transition:.3s;}
-    .service-item:hover{transform:translateY(-5px);}
-    .service-item img{width:80px;margin-bottom:1rem;}
+    :root {
+      --primary: #5b6ef5;
+      --secondary: #7a5cff;
+      --accent: #00d4ff;
+      --bg: #f8faff;
+      --dark: #1e1e2f;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+      background-color: var(--bg);
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, .95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+    }
+
+    nav h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      background: linear-gradient(to right, rgba(91, 110, 245, 0.8), rgba(0, 212, 255, 0.8)),
+        url('https://images.unsplash.com/photo-1581092795360-3e7b2cc4f3df?auto=format&fit=crop&w=1920&q=80')center/cover;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      padding: .9rem 2rem;
+      border: none;
+      border-radius: 30px;
+      background: var(--accent);
+      color: var(--dark);
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .hero button:hover {
+      background: white;
+    }
+
+    section {
+      padding: 6rem 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .about img {
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    }
+
+    .about p {
+      max-width: 600px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+      transition: .3s;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-item img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
 
     /* TESTIMONIAL SLIDER */
     .testimonials {
-      background: linear-gradient(135deg,#eef1ff,#f9faff);
+      background: linear-gradient(135deg, #eef1ff, #f9faff);
       border-radius: 15px;
       padding: 4rem 2rem;
       text-align: center;
@@ -58,7 +188,7 @@
       background: white;
       padding: 2rem;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       margin: 0 auto;
       max-width: 600px;
     }
@@ -96,35 +226,256 @@
     }
 
     /* MAP + CONTACT */
-    .contact-card{background:white;border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.1);padding:2rem;max-width:400px;margin:2rem auto;text-align:left;}
-    .contact-card .wa-button{display:inline-flex;align-items:center;background:#25d366;color:white;border:none;border-radius:25px;padding:.6rem 1rem;
-      margin:1rem 0;font-weight:500;font-size:1rem;text-decoration:none;transition:.3s;}
-    .contact-card .wa-button:hover{background:#1ebe5d;}
-    .contact-card .wa-button img{width:22px;height:22px;margin-right:8px;}
-    .map-container{position:relative;overflow:hidden;border-radius:15px;margin:2rem auto;max-width:1000px;height:450px;
-      box-shadow:0 4px 15px rgba(0,0,0,.15);}
-    .map-container iframe{width:100%;height:100%;border:none;pointer-events:none;}
-    .map-overlay{position:absolute;inset:0;cursor:pointer;}
+    .contact-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+      padding: 2rem;
+      max-width: 400px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+
+    .contact-card .wa-button {
+      display: inline-flex;
+      align-items: center;
+      background: #25d366;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: .6rem 1rem;
+      margin: 1rem 0;
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .contact-card .mapp-button {
+      display: inline-flex;
+      align-items: center;
+      background: #444444;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: .6rem 1rem;
+      margin: 1rem 0;
+      font-weight: 500;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .contact-card .wa-button:hover {
+      background: #1ebe5d;
+    }
+
+    .contact-card .wa-button img {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      margin: 2rem auto;
+      max-width: 1000px;
+      height: 450px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none;
+    }
+
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+    }
 
     /* Floating WhatsApp */
-    .wa-float{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25d366;color:white;border-radius:50%;
-      text-align:center;font-size:30px;box-shadow:2px 2px 10px rgba(0,0,0,.2);z-index:1000;transition:.3s;}
-    .wa-float img{width:35px;margin-top:12px;}
-    .wa-float:hover{background:#1ebe5d;transform:scale(1.05);}
-    .wa-label{position:fixed;bottom:22px;right:90px;background:white;color:#000;padding:8px 15px;border-radius:20px;
-      box-shadow:2px 2px 10px rgba(0,0,0,.15);font-size:.9rem;font-weight:600;transition:.3s;opacity:0;}
-    .wa-float:hover + .wa-label{opacity:1;}
-    footer{text-align:center;background:var(--primary);color:white;padding:1.5rem;font-size:.9rem;}
-    .fade-in{opacity:0;transform:translateY(40px);transition:all .8s ease;}
-    .fade-in.show{opacity:1;transform:translateY(0);}
-    @media(max-width:768px){.about{text-align:center;}.about img{width:80%;}nav ul{display:none;}.hero h2{font-size:2rem;}}
+    .wa-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+      z-index: 1000;
+      transition: .3s;
+    }
+
+    .wa-float img {
+      width: 35px;
+      margin-top: 12px;
+    }
+
+    .wa-float:hover {
+      background: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+    .wa-label {
+      position: fixed;
+      bottom: 22px;
+      right: 90px;
+      background: white;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, .15);
+      font-size: .9rem;
+      font-weight: 600;
+      transition: .3s;
+      opacity: 0;
+    }
+
+    .wa-float:hover+.wa-label {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem;
+      font-size: .9rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all .8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Carousel Tentang Kami - versi center & lebih besar */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* sebelumnya 450px, agar lebih besar */
+  margin: 0 auto; /* ini bikin carousel tepat di tengah */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.carousel-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Dots di bawah gambar */
+.carousel-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.carousel-dots .dot {
+  height: 11px;
+  width: 11px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: var(--primary);
+  transform: scale(1.2);
+}
+
+
+
+    @media(max-width:768px) {
+      .about {
+        text-align: center;
+      }
+
+      .about img {
+        width: 80%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Responsif: Pastikan carousel tetap center di layar kecil */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .carousel-container {
+    width: 95%;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
   </style>
 </head>
+
 <body>
 
   <header>
     <nav>
-      <h1>Delapan Computer</h1>
+      <h1>BABACOM</h1>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Tentang</a></li>
@@ -136,26 +487,158 @@
   </header>
 
   <section class="hero" id="home">
-    <h2>Perbaikan Laptop Cepat, Aman & Bergaransi</h2>
-    <p>Service laptop terpercaya di Bandung. Kami menangani semua jenis kerusakan, mulai dari software, hardware hingga aksesoris dengan layanan cepat dan profesional.</p>
+    <h2>Laptop Service Spesialist & Kursus Teknisi Laptop Bandung</h2>
+    <p>Service laptop terpercaya di Bandung. Kami menangani semua jenis laptop dan kerusakan, mulai dari software,
+      hardware hingga aksesoris dengan layanan cepat dan profesional serta bisa DITUNGGU!.</p>
+    <p>Berpengalan Sudah Lebih Dari 15 Tahun</p>
     <button onclick="window.location='#contact'">Hubungi Kami Sekarang</button>
   </section>
 
   <section class="about fade-in" id="about">
-    <img src="https://images.pexels.com/photos/4705616/pexels-photo-4705616.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Teknisi sedang service laptop" />
+    <!-- <img src="https://images.pexels.com/photos/4705616/pexels-photo-4705616.jpeg?auto=compress&cs=tinysrgb&w=600"
+      alt="Teknisi sedang service laptop" /> -->
+
+    <!-- <img src="./aset/service_laptop.png?auto=compress&cs=tinysrgb&w=600" alt="Teknisi sedang service laptop" /> -->
+    <!-- Carousel Gambar Tentang Kami -->
+    <div class="carousel-container">
+      <div class="carousel-slide active">
+        <img src="./aset/satu.jpg" alt="Tim Teknisi Laptop BABACOM 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="./aset/dua.jpg" alt="Tim Teknisi Laptop BABACOM 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="./aset/tiga.jpg" alt="Workshop BABACOM">
+      </div>
+      <div class="carousel-slide">
+        <img src="./aset/service_laptop.png" alt="Workshop BABACOM">
+      </div>
+
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
     <div>
       <h2 class="section-title">Tentang Kami</h2>
-      <p>Delapan Computer berdiri sejak 2016 sebagai pusat servis laptop terbaik di Bandung. Kami melayani berbagai perbaikan mulai dari penggantian komponen, upgrade, hingga instalasi software dengan teknisi berpengalaman.<br><br>Kami juga menyediakan layanan <strong>jemput antar laptop</strong> untuk area Bandung dan Cimahi.</p>
+      <p>BABACOM berdiri sejak 2010 sebagai pusat servis laptop terbaik di Bandung. Kami melayani berbagai perbaikan
+        mulai dari penggantian komponen, upgrade, hingga instalasi software dengan teknisi berpengalaman.<br>
+        <br>Kami juga menyediakan layanan <strong>Kursus Teknisi Laptop</strong> untuk area Bandung.
+      </p>
+    </div>
+    <!-- Bagian layanan dari gambar pertama -->
+    <div class="contact-card"
+      style="max-width: 800px; margin: 0 auto 60px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 40px 30px;">
+      <ul style="list-style: none; padding: 0; margin: 0; text-align: left; color: #333;">
+        <li style="margin-bottom: 25px;">
+          <span style="color: #4a5cff; font-weight: 700;">➤ 1. Service Langsung di Workshop</span>
+          <span style="color: #333;">(Bisa Langsung Ditunggu)</span><br>
+          <span style="margin-left: 28px;">Jam operasional: <strong>08.00 – 23.00 WIB</strong></span>
+        </li>
+        <li style="margin-bottom: 25px;">
+          <span style="color: #4a5cff; font-weight: 700;">➤ 2. Service Laptop Panggilan</span>
+          <span style="color: #333;">& dikerjakan langsung di tempat (kantor, kampus, kosan, rumah, dll)</span><br>
+          <span style="margin-left: 28px;">Jam operasional teknisi lapangan: <strong>08.00 – 20.00 WIB</strong></span>
+        </li>
+        <li>
+          <span style="color: #4a5cff; font-weight: 700;">➤ 3. Service Laptop Antar Jemput</span><br>
+          <span style="margin-left: 28px;">
+            Gratis ongkos antar jemput tanpa syarat
+            (<strong>jaminan keamanan barang 100%</strong>)<br>
+            Untuk informasi & konsultasi, klik tombol di bawah ini.
+          </span>
+        </li>
+      </ul>
+      <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+        <a href="https://wa.me/085173003100" target="_blank" class="wa-button">
+          <img src="./aset/WhatsApp.svg" alt="WhatsApp">0811-2221-201</a>
+        <a href="https://www.google.com/maps/place/Service+Laptop+Jatinangor+Bisa+Di+Tunggu+(Delapan+Computer)/@-6.939962,107.755911,16z/data=!4m6!3m5!1s0x2e68c3bcc94508df:0x8c0b5d1fbca9356a!8m2!3d-6.9376002!4d107.7579419!16s%2Fg%2F11hg47c59t?hl=id&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="mapp-button">
+          <img src="./aset/maps icon.svg" alt="Google Maps" style="width: 22px; height: 22px; margin-right: 10px;">
+          Google Maps Toko
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sosmed" style="text-align: center; padding: 40px 20px; background-color: #f7f9ff;">
+    <h2 style="color: #4a5cff; font-weight: 700; margin-bottom: 25px;">Ikuti Kami di Sosial Media</h2>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/servicelaptopbandungbabacom/" target="_blank" style="display: flex; align-items: center; justify-content: center;
+              gap: 10px; background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+              color: white; font-weight: 600; border-radius: 30px;
+              width: 250px; padding: 12px 0; text-decoration: none;
+              box-shadow: 0 3px 8px rgba(0,0,0,0.1); transition: 0.3s;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"
+          style="width: 20px; height: 20px; filter: invert(100%) brightness(100%);">
+        Instagram
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/servicelaptopbandungbabacom" target="_blank" style="display: flex; align-items: center; justify-content: center;
+              gap: 10px; background: #1877f2; color: white; font-weight: 600;
+              border-radius: 30px; width: 250px; padding: 12px 0;
+              text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+              transition: 0.3s;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"
+          style="width: 20px; height: 20px; filter: invert(100%) brightness(100%);">
+        Facebook
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@babacombandung" target="_blank" style="display: flex; align-items: center; justify-content: center;
+              gap: 10px; background: #ff0000; color: white; font-weight: 600;
+              border-radius: 30px; width: 250px; padding: 12px 0;
+              text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+              transition: 0.3s;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube"
+          style="width: 22px; height: 22px; filter: invert(100%) brightness(100%);">
+        YouTube
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@babacombdg" target="_blank" style="display: flex; align-items: center; justify-content: center;
+              gap: 10px; background: #000000; color: white; font-weight: 600;
+              border-radius: 30px; width: 250px; padding: 12px 0;
+              text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+              transition: 0.3s;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"
+          style="width: 20px; height: 20px; filter: invert(100%) brightness(100%);">
+        TikTok
+      </a>
+
     </div>
   </section>
 
   <section class="fade-in" id="services">
     <h2 class="section-title">Layanan Kami</h2>
     <div class="service-grid">
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/3076/3076709.png"><h3>Perbaikan Hardware</h3><p>Ganti keyboard, layar, baterai, atau perbaikan motherboard oleh teknisi berpengalaman.</p></div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png"><h3>Install & Recovery Software</h3><p>Install ulang sistem operasi, driver, dan software penting tanpa kehilangan data.</p></div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/753/753318.png"><h3>Pembersihan & Overheating</h3><p>Bersihkan kipas dan thermal paste untuk mencegah panas berlebih dan menjaga performa.</p></div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2306/2306154.png"><h3>Aksesoris & Sparepart</h3><p>Jual aksesoris laptop seperti charger, tas, cooling pad, dan lainnya dengan harga terbaik.</p></div>
+      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/3076/3076709.png">
+        <h3>WINDOWS SERVICE</h3>
+        <p>Ganti keyboard, layar, baterai, atau perbaikan motherboard oleh teknisi berpengalaman.</p>
+      </div>
+      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/3076/3076709.png">
+        <h3>Perbaikan Hardware</h3>
+        <p>Ganti keyboard, layar, baterai, atau perbaikan motherboard oleh teknisi berpengalaman.</p>
+      </div>
+      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png">
+        <h3>Install & Recovery Software</h3>
+        <p>Install ulang sistem operasi, driver, dan software penting tanpa kehilangan data.</p>
+      </div>
+      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/753/753318.png">
+        <h3>Pembersihan & Overheating</h3>
+        <p>Bersihkan kipas dan thermal paste untuk mencegah panas berlebih dan menjaga performa.</p>
+      </div>
+      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2306/2306154.png">
+        <h3>Aksesoris & Sparepart</h3>
+        <p>Jual aksesoris laptop seperti charger, tas, cooling pad, dan lainnya dengan harga terbaik.</p>
+      </div>
     </div>
   </section>
 
@@ -198,24 +681,29 @@
       <p><strong>Email:</strong> support@....com</p>
       <p><strong>Telepon:</strong> 021 - </p>
       <p><strong>Atau</strong></p>
-      <a href="https://wa.me/085173003100" target="_blank" class="wa-button"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">0811-2221-201</a>
+      <a href="https://wa.me/085173003100" target="_blank" class="wa-button">
+        <img src="./aset/WhatsApp.svg" alt="WhatsApp">0811-2221-201</a>
       <h3>Alamat</h3>
       <p>Jl. Raya Jatinangor No.2, Cibeusi, Kec. Jatinangor<br>Kabupaten Sumedang, Jawa Barat 45363</p>
     </div>
 
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.316636794023!2d107.7579419!3d-6.9376001999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3bcc94508df%3A0x8c0b5d1fbca9356a!2sService%20Laptop%20Jatinangor%20Bisa%20Di%20Tunggu%20(Delapan%20Computer)!5e0!3m2!1sid!2sid!4v1728312114560!5m2!1sid!2sid" allowfullscreen loading="lazy"></iframe>
-      <a href="https://www.google.com/maps/place/Service+Laptop+Jatinangor+Bisa+Di+Tunggu+(Delapan+Computer)/@-6.939962,107.755911,16z/data=!4m6!3m5!1s0x2e68c3bcc94508df:0x8c0b5d1fbca9356a!8m2!3d-6.9376002!4d107.7579419!16s%2Fg%2F11hg47c59t?hl=id&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-overlay"></a>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.316636794023!2d107.7579419!3d-6.9376001999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3bcc94508df%3A0x8c0b5d1fbca9356a!2sService%20Laptop%20Jatinangor%20Bisa%20Di%20Tunggu%20(Delapan%20Computer)!5e0!3m2!1sid!2sid!4v1728312114560!5m2!1sid!2sid"
+        allowfullscreen loading="lazy"></iframe>
+      <a href="https://www.google.com/maps/place/Service+Laptop+Jatinangor+Bisa+Di+Tunggu+(Delapan+Computer)/@-6.939962,107.755911,16z/data=!4m6!3m5!1s0x2e68c3bcc94508df:0x8c0b5d1fbca9356a!8m2!3d-6.9376002!4d107.7579419!16s%2Fg%2F11hg47c59t?hl=id&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank" class="map-overlay"></a>
     </div>
   </section>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/085173003100?text=Halo%20Delapan Computer%2C%20saya%20ingin%20konsultasi%20tentang%20service%20laptop" class="wa-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+  <a href="https://wa.me/085173003100?text=Halo%20BABACOM%2C%20saya%20ingin%20konsultasi%20tentang%20service%20laptop"
+    class="wa-float" target="_blank">
+    <img src="./aset/WhatsApp.svg" alt="WA">
   </a>
   <div class="wa-label">Chat Whatsapp</div>
 
-  <footer>© 2025 Delapan Computer Bandung. Semua hak cipta dilindungi.</footer>
+  <footer>© 2025 BABACOM Bandung. Semua hak cipta dilindungi.</footer>
 
   <script>
     // Fade-in animation
@@ -255,6 +743,37 @@
         autoSlide = setInterval(nextSlide, 4000);
       });
     });
+
+    // Carousel Tentang Kami
+    const aboutSlides = document.querySelectorAll(".carousel-slide");
+    const aboutDots = document.querySelectorAll(".carousel-dots .dot");
+    let aboutIndex = 0;
+
+    function showAboutSlide(n) {
+      aboutSlides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === n);
+        aboutDots[i].classList.toggle("active", i === n);
+      });
+    }
+
+    function nextAboutSlide() {
+      aboutIndex = (aboutIndex + 1) % aboutSlides.length;
+      showAboutSlide(aboutIndex);
+    }
+
+    let aboutAuto = setInterval(nextAboutSlide, 4000);
+
+    // klik manual via dot
+    aboutDots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        clearInterval(aboutAuto);
+        showAboutSlide(i);
+        aboutIndex = i;
+        aboutAuto = setInterval(nextAboutSlide, 4000);
+      });
+    });
+
   </script>
 </body>
+
 </html>
