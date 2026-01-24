@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BABACOM Bandung | Jasa Service Laptop Profesional</title>
+  <title>ABAH LAPTOP CIMAHI | Jasa Service Laptop Profesional</title>
   <style>
     :root {
       --primary: #5b6ef5;
@@ -169,6 +169,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      display: block
     }
 
     .testimonial-slide {
@@ -176,6 +177,8 @@
       opacity: 0;
       transform: translateX(30px);
       transition: all 0.8s ease;
+      overflow: hidden;      /* ⬅️ PENTING */
+      border-radius: 12px;
     }
 
     .testimonial-slide.active {
@@ -417,8 +420,51 @@
   transform: scale(1.2);
 }
 
+.testimonial-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
 
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.image-zoom img {
+    width: 100%;
+    max-width: 400px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .image-zoom img:active {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
     @media(max-width:768px) {
       .about {
         text-align: center;
@@ -468,18 +514,37 @@
   }
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo img {
+  height: 32px;
+}
   </style>
+  
+    <link rel="icon" type="image/png" href="aset/logo-abah.jpg">
 </head>
 
 <body>
 
   <header>
     <nav>
-      <h1>BABACOM</h1>
+      <!-- <h1>ABAH LAPTOP</h1> -->
+       <a href="#home" class="logo">
+        <img src="./aset/logo-abah.jpg" alt="ABAH LAPTOP">
+        <span>ABAH LAPTOP</span>
+      </a>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#services">Layanan</a></li>
+        <li><a href="#about">Layanan</a></li>
+        <!-- <li><a href="#services">Layanan</a></li> -->
         <li><a href="#testimonials">Testimoni</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
@@ -487,81 +552,667 @@
   </header>
 
   <section class="hero" id="home">
-    <h2>Laptop Service Spesialist & Kursus Teknisi Laptop Bandung</h2>
-    <p>Service laptop terpercaya di Bandung. Kami menangani semua jenis laptop dan kerusakan, mulai dari software,
-      hardware hingga aksesoris dengan layanan cepat dan profesional serta bisa DITUNGGU!.</p>
-    <p>Berpengalan Sudah Lebih Dari 15 Tahun</p>
+    <h2>SPESIALIST SERVICE LAPTOP & MACBOOK</h2>
+    <h1>SEWA LAPTOP & JUAL BELI LAPTOP CIMAHI</h1><br>
+    <p>ABAH LAPTOP spesialist service laptop semua merek & kerusakan laptop bisa langsung di tunggu, terpercaya & berpengalaman sudah lebih dari 20 tahun, 
+      Kami juga membeli laptop bekas maupun rusak</p>
     <button onclick="window.location='#contact'">Hubungi Kami Sekarang</button>
   </section>
 
   <section class="about fade-in" id="about">
-    <!-- <img src="https://images.pexels.com/photos/4705616/pexels-photo-4705616.jpeg?auto=compress&cs=tinysrgb&w=600"
-      alt="Teknisi sedang service laptop" /> -->
-
-    <!-- <img src="../aset/service_laptop.png?auto=compress&cs=tinysrgb&w=600" alt="Teknisi sedang service laptop" /> -->
-    <!-- Carousel Gambar Tentang Kami -->
-    <div class="carousel-container">
-      <div class="carousel-slide active">
-        <img src="./aset/satu.jpg" alt="Tim Teknisi Laptop BABACOM 1">
-      </div>
-      <div class="carousel-slide">
-        <img src="./aset/dua.jpg" alt="Tim Teknisi Laptop BABACOM 2">
-      </div>
-      <div class="carousel-slide">
-        <img src="./aset/tiga.jpg" alt="Workshop BABACOM">
-      </div>
-      <div class="carousel-slide">
-        <img src="./aset/service_laptop.png" alt="Workshop BABACOM">
-      </div>
-
-      <div class="carousel-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
 
     <div>
-      <h2 class="section-title">Tentang Kami</h2>
-      <p>BABACOM berdiri sejak 2010 sebagai pusat servis laptop terbaik di Bandung. Kami melayani berbagai perbaikan
-        mulai dari penggantian komponen, upgrade, hingga instalasi software dengan teknisi berpengalaman.<br>
-        <br>Kami juga menyediakan layanan <strong>Kursus Teknisi Laptop</strong> untuk area Bandung.
-      </p>
-    </div>
-    <!-- Bagian layanan dari gambar pertama -->
-    <div class="contact-card"
-      style="max-width: 800px; margin: 0 auto 60px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 40px 30px;">
-      <ul style="list-style: none; padding: 0; margin: 0; text-align: left; color: #333;">
-        <li style="margin-bottom: 25px;">
-          <span style="color: #4a5cff; font-weight: 700;">➤ 1. Service Langsung di Workshop</span><br>
-          <span style="color: #333; margin-left: 28px;">Bisa Langsung Ditunggu</span><br>
-          <span style="margin-left: 28px;">Jam operasional: <strong>08.00 – 23.00 WIB</strong></span>
-        </li>
-        <li style="margin-bottom: 25px;">
-          <span style="color: #4a5cff; font-weight: 700;">➤ 2. Service Laptop Panggilan</span>
-          <span style="color: #333;">& dikerjakan langsung di tempat (kantor, kampus, kosan, rumah, dll)</span><br>
-          <span style="margin-left: 28px;">Jam operasional teknisi lapangan: <strong>08.00 – 20.00 WIB</strong></span>
-        </li>
-        <li>
-          <span style="color: #4a5cff; font-weight: 700;">➤ 3. Service Laptop Antar Jemput</span><br>
-          <span style="margin-left: 28px;">
-            Gratis ongkos antar jemput tanpa syarat
-            (<strong>jaminan keamanan barang 100%</strong>)<br>
-            Untuk informasi & konsultasi, klik tombol di bawah ini.
-          </span>
-        </li>
-      </ul>
-      <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
-        <a href="https://wa.me/085173003100" target="_blank" class="wa-button">
-          <img src="./aset/WhatsApp.svg" alt="WhatsApp">0811-2221-201</a>
-        <a href="https://www.google.com/maps/place/Service+Laptop+Jatinangor+Bisa+Di+Tunggu+(Delapan+Computer)/@-6.939962,107.755911,16z/data=!4m6!3m5!1s0x2e68c3bcc94508df:0x8c0b5d1fbca9356a!8m2!3d-6.9376002!4d107.7579419!16s%2Fg%2F11hg47c59t?hl=id&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank" class="mapp-button">
-          <img src="./aset/maps icon.svg" alt="Google Maps" style="width: 22px; height: 22px; margin-right: 10px;">
-          Google Maps Toko
-        </a>
+      
+      <div style="line-height: 1.5; margin-bottom: 25px;">
+        <h2 class="section-title">Value & Benefits</h2>
+        1.	Khusus Untuk Mahasiswa Diskon harga 10% untuk service & sparepart <br>
+        2.	Service Laptop bisa langsung di tunggu <br>
+        3.	Garansi service Up To 1 tahun <br>
+        4.	Bisa antar jemput service laptop gratis untuk daerah jatinangor <br>
+        5.	Service laptop bisa panggilan untuk instansi & bisa di kerjakan langsung di office
+
+        <!-- <p>BABACOM berdiri sejak 2010 sebagai pusat servis laptop terbaik di Bandung. Kami melayani berbagai perbaikan
+          mulai dari penggantian komponen, upgrade, hingga instalasi software dengan teknisi berpengalaman.<br>
+          <br>Kami juga menyediakan layanan <strong>Kursus Teknisi Laptop</strong> untuk area Bandung.
+        </p> -->
+      </div>
+      
+      <h2 class="section-title">LAYANAN SERVICE LAPTOP CIMAHI</h2>
+      <span style="color: #4a5cff; font-weight: 700;">➤ 🪟⚠️ WINDOWS PROBLEM & SOFTWARE SOLUTION</span><br><br>
+      
+      <div class="carousel-container">
+      <div class="carousel-slide active">
+        <img src="./aset/abah-laptop/IMG_20250423_154358.jpg" alt="Abah Laptop 1">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/IMG_20251031_134919.jpg" alt="Abah Laptop 2">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/IMG_20251031_141611.jpg" alt="Abah Laptop 3">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/IMG_20251031_142822.jpg" alt="Abah Laptop 4">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730734340597.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730734371710.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730737439989.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730737760017.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730739335453.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730741213000.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730741373114.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730741661767.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730741790927.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730741945033.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730742217491.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730742770069.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730742993947.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1730743123214.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864771570.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864810486.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864874095.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864906495.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864932907.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864957353.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743864976949.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743865007055.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743865183512.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743865423079.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1743865755250.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745763385115.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745920032419.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745920463891.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745920487435.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745920770533.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745920890006.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1745921053681.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1746677617531.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1746677720414.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1746711461221.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1747752002172.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1769095281868.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1769095335397.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1769095368099.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1769095543644.jpg">
+      </div>
+
+      <div class="carousel-slide">
+        <img src="./aset/abah-laptop/PhotoGrid_Site_1769095631072.jpg">
+      </div>
+          
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+
+      </div>
+
+      <div style="margin-bottom: 20px;">
+          <div class="service-list" style="line-height: 1.5; margin-top: 20px;">
+            <div >
+              1. Service laptop Windows lemot & ngelag<br>
+              2. Service laptop lupa password login<br>
+              3. Service laptop bluescreen / error<br>
+              4. Service laptop tidak bisa masuk Windows<br>
+              5. Recovery data (data terhapus, terformat, HDD / SSD rusak)<br>
+              6. Instal Windows 7, 10, 11 & driver lengkap<br>
+              7. Instal aplikasi (Microsoft Office, Corel Draw, Photoshop, Canva, WhatsApp, Zoom, dll)
+            </div>
+          </div>
+      </div>
+        <span style="color: #4a5cff; font-weight: 700; ">➤ 🔧⬆️ UGRADE & MAINTENANCE</span><br><br>
+
+        
+        <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="./aset/abah-laptop/IMG_20250423_154358.jpg" alt="Abah Laptop 1">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_134919.jpg" alt="Abah Laptop 2">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_141611.jpg" alt="Abah Laptop 3">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_142822.jpg" alt="Abah Laptop 4">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730734340597.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730734371710.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730737439989.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730737760017.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730739335453.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741213000.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741373114.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741661767.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741790927.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741945033.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742217491.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742770069.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742993947.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730743123214.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864771570.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864810486.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864874095.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864906495.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864932907.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864957353.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864976949.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865007055.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865183512.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865423079.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865755250.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745763385115.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920032419.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920463891.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920487435.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920770533.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920890006.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745921053681.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746677617531.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746677720414.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746711461221.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1747752002172.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095281868.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095335397.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095368099.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095543644.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095631072.jpg">
+        </div>
+            
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+      </div>
+
+      <div style="margin-bottom: 20px;">
+          <div class="service-list" style="line-height: 1.5; margin-top: 20px;">
+            <div >
+              1.	Repasta & cleaning laptop<br>
+              2.	Upgrade RAM & SSD Laptop
+            </div>
+          </div>
+      </div>
+      <span style="color: #4a5cff; font-weight: 700; ">➤ 🖥️⚠️ HARDWARE PROBLEM SOLUTION</span><br><br>
+
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <img src="./aset/abah-laptop/IMG_20250423_154358.jpg" alt="Abah Laptop 1">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_134919.jpg" alt="Abah Laptop 2">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_141611.jpg" alt="Abah Laptop 3">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/IMG_20251031_142822.jpg" alt="Abah Laptop 4">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730734340597.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730734371710.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730737439989.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730737760017.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730739335453.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741213000.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741373114.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741661767.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741790927.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730741945033.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742217491.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742770069.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730742993947.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1730743123214.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864771570.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864810486.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864874095.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864906495.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864932907.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864957353.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743864976949.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865007055.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865183512.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865423079.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1743865755250.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745763385115.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920032419.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920463891.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920487435.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920770533.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745920890006.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1745921053681.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746677617531.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746677720414.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1746711461221.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1747752002172.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095281868.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095335397.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095368099.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095543644.jpg">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="./aset/abah-laptop/PhotoGrid_Site_1769095631072.jpg">
+        </div>
+            
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+      </div>
+      <div style="margin-bottom: 20px;">
+          <div class="service-list" style="line-height: 1.5; margin-top: 20px;">
+            <div >
+              1.	Service laptop mati total ( laptop tidak bisa hidup sama sekali )<br>
+              2.	Service Laptop No Display ( tidak ada tampilan ke layer monitor internal & exsternal )<br>
+              3.	Service Jack Power laptop ( kadang bisa masuk power kadang tidak )<br>
+              4.	Service Usb Laptop ( Tidak bisa detec, kurang power & etc )<br>
+            </div>
+          </div>
+      </div>
+      
+      <div style="text-align: center; margin-bottom: 25px;">
+        <span style="color: #4a5cff; font-weight: 700; margin-bottom: 15px;"> 🏷️ Price list Jasa service laptop </span>
+        <div class="image-zoom" style="margin-top: -20;">
+          <img src="./aset/price-list/abah part.jpg" alt="Abah Laptop 1" style="margin-bottom: 15px; margin-top: 15px;"><br>
+          <img src="./aset/price-list/abah service.jpg" alt="Abah Laptop 1">
+        </div>
+      </div>
+      <!-- Bagian layanan dari gambar pertama -->
+      <div class="contact-card"
+        style="max-width: 800px; margin: 0 auto 60px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 40px 30px;">
+        <ul style="list-style: none; padding: 0; margin: 0; text-align: center; color: #333;">
+          <li style="margin-bottom: 25px;">
+            <span style="color: #4a5cff; font-weight: 700; ">Tentang Kami</span><br>
+            <span style="color: #333;">ABAH LAPTOP CIMAHI</span><br>
+            <!-- <span style="margin-left: 28px;">Jam operasional: <strong>08.00 – 23.00 WIB</strong></span> -->
+          </li>
+          <li style="margin-bottom: 25px;">
+            <span style="color: #4a5cff; font-weight: 700;">Informasi & Konsultasi</span><br>
+            <span>
+              Dapat menghubungi nonor whatsapp dibawah atau klik map untuk mengetahui lokasi kami.
+            </span>
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+              <a href="https://wa.me/085133440061" target="_blank" class="wa-button">
+                <img src="./aset/WhatsApp.svg" alt="WhatsApp">085133440061</a>
+              <a href="https://www.google.com/maps/place/Service+laptop+cimahi+bisa+di+tunggu+(abah+laptop)/@-6.8775506,107.5386862,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68c31c4e5a1f7d:0xf0f17c2dfa8de480!8m2!3d-6.8775506!4d107.5386862!16s%2Fg%2F11jmpxx3ky?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" class="mapp-button">
+                <img src="./aset/maps icon.svg" alt="Google Maps" style="width: 22px; height: 22px; margin-right: 10px;">
+                Google Maps Toko
+              </a>
+            </div>
+          </li>
+          <li style="margin-bottom: 25px;">
+            <span style="color: #4a5cff; font-weight: 700; ">Jam Oprasional </span><br>
+            <span style="color: #333;"><strong>08-00 - 21.00 WIB<br> Hari jumat libur</strong></span><br>
+          </li>
+        </ul>
       </div>
     </div>
+
   </section>
 
   <section id="sosmed" style="text-align: center; padding: 40px 20px; background-color: #f7f9ff;">
@@ -570,7 +1221,7 @@
     <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
 
       <!-- Instagram -->
-      <a href="https://www.instagram.com/servicelaptopbandungbabacom/" target="_blank" style="display: flex; align-items: center; justify-content: center;
+      <a href="https://www.instagram.com/servislaptopcimahi/" target="_blank" style="display: flex; align-items: center; justify-content: center;
               gap: 10px; background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
               color: white; font-weight: 600; border-radius: 30px;
               width: 250px; padding: 12px 0; text-decoration: none;
@@ -580,19 +1231,8 @@
         Instagram
       </a>
 
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/servicelaptopbandungbabacom" target="_blank" style="display: flex; align-items: center; justify-content: center;
-              gap: 10px; background: #1877f2; color: white; font-weight: 600;
-              border-radius: 30px; width: 250px; padding: 12px 0;
-              text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-              transition: 0.3s;">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"
-          style="width: 20px; height: 20px; filter: invert(100%) brightness(100%);">
-        Facebook
-      </a>
-
       <!-- YouTube -->
-      <a href="https://www.youtube.com/@babacombandung" target="_blank" style="display: flex; align-items: center; justify-content: center;
+      <a href="https://www.youtube.com/@Servicelaptopcimahi/featured" target="_blank" style="display: flex; align-items: center; justify-content: center;
               gap: 10px; background: #ff0000; color: white; font-weight: 600;
               border-radius: 30px; width: 250px; padding: 12px 0;
               text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -603,7 +1243,7 @@
       </a>
 
       <!-- TikTok -->
-      <a href="https://www.tiktok.com/@babacombdg" target="_blank" style="display: flex; align-items: center; justify-content: center;
+      <a href="https://www.tiktok.com/@service.laptop.cimahi?lang=pt-BR" target="_blank" style="display: flex; align-items: center; justify-content: center;
               gap: 10px; background: #000000; color: white; font-weight: 600;
               border-radius: 30px; width: 250px; padding: 12px 0;
               text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -616,59 +1256,49 @@
     </div>
   </section>
 
-  <section class="fade-in" id="services">
-    <h2 class="section-title">Layanan Kami</h2>
-    <div class="service-grid">
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/3076/3076709.png">
-        <h3>WINDOWS SERVICE</h3>
-        <p>Ganti keyboard, layar, baterai, atau perbaikan motherboard oleh teknisi berpengalaman.</p>
-      </div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/3076/3076709.png">
-        <h3>Perbaikan Hardware</h3>
-        <p>Ganti keyboard, layar, baterai, atau perbaikan motherboard oleh teknisi berpengalaman.</p>
-      </div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png">
-        <h3>Install & Recovery Software</h3>
-        <p>Install ulang sistem operasi, driver, dan software penting tanpa kehilangan data.</p>
-      </div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/753/753318.png">
-        <h3>Pembersihan & Overheating</h3>
-        <p>Bersihkan kipas dan thermal paste untuk mencegah panas berlebih dan menjaga performa.</p>
-      </div>
-      <div class="service-item"><img src="https://cdn-icons-png.flaticon.com/512/2306/2306154.png">
-        <h3>Aksesoris & Sparepart</h3>
-        <p>Jual aksesoris laptop seperti charger, tas, cooling pad, dan lainnya dengan harga terbaik.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- TESTIMONIAL SLIDER -->
   <section class="testimonials fade-in" id="testimonials">
     <h2 class="section-title">Testimoni Pelanggan</h2>
 
     <div class="testimonial-slide active">
       <div class="testimonial-card">
-        <p>"Service cepat dan hasil memuaskan. Laptop saya mati total, sekarang nyala lagi. Recommended!"</p>
-        <h4>– Rina, Cileunyi</h4>
+        <img src="./aset/ulasan/01.jpg" alt="Abah Laptop 1" >
       </div>
     </div>
 
     <div class="testimonial-slide">
       <div class="testimonial-card">
-        <p>"Pelayanan ramah dan profesional. Bisa jemput laptop ke rumah, jadi praktis banget."</p>
-        <h4>– Andi, Bandung Timur</h4>
+        <img src="./aset/ulasan/02.jpg" alt="Abah Laptop 2" >
       </div>
     </div>
 
     <div class="testimonial-slide">
       <div class="testimonial-card">
-        <p>"Harga terjangkau, hasil rapi, dan teknisi sangat komunikatif. Laptop saya sekarang super cepat!"</p>
-        <h4>– Dwi, Sumedang</h4>
+        <img src="./aset/ulasan/03.jpg" alt="Abah Laptop 4" >
+      </div>
+    </div>
+
+    <div class="testimonial-slide">
+      <div class="testimonial-card">
+        <img src="./aset/ulasan/04.jpg" alt="Abah Laptop 5" >
+      </div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-card">
+        <img src="./aset/ulasan/05.jpg" alt="Abah Laptop 6" >
+      </div>
+    </div>
+    <div class="testimonial-slide">
+      <div class="testimonial-card">
+        <img src="./aset/ulasan/06.jpg" alt="Abah Laptop 7" >
       </div>
     </div>
 
     <div class="dots">
       <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
@@ -678,32 +1308,30 @@
     <h2 class="section-title">Hubungi Kami</h2>
     <div class="contact-card">
       <h2>Hubungi Kami</h2>
-      <p><strong>Email:</strong> support@....com</p>
-      <p><strong>Telepon:</strong> 021 - </p>
+      <!-- <p><strong>Email:</strong> support@....com</p> -->
+      <p><strong>Telepon:</strong> 0851-3344-0061 </p>
       <p><strong>Atau</strong></p>
-      <a href="https://wa.me/085173003100" target="_blank" class="wa-button">
-        <img src="./aset/WhatsApp.svg" alt="WhatsApp">0811-2221-201</a>
+      <a href="https://wa.me/685133440061" target="_blank" class="wa-button">
+        <img src="./aset/WhatsApp.svg" alt="WhatsApp">Aksesoris & Sparepart</a>
       <h3>Alamat</h3>
-      <p>Jl. Raya Jatinangor No.2, Cibeusi, Kec. Jatinangor<br>Kabupaten Sumedang, Jawa Barat 45363</p>
+      <p>Gg. Kb. Kalapa 1 Jl. Sisingamangaraja No.5, Setiamanah, Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat 40524</p>
     </div>
 
     <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.316636794023!2d107.7579419!3d-6.9376001999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c3bcc94508df%3A0x8c0b5d1fbca9356a!2sService%20Laptop%20Jatinangor%20Bisa%20Di%20Tunggu%20(Delapan%20Computer)!5e0!3m2!1sid!2sid!4v1728312114560!5m2!1sid!2sid"
-        allowfullscreen loading="lazy"></iframe>
-      <a href="https://www.google.com/maps/place/Service+Laptop+Jatinangor+Bisa+Di+Tunggu+(Delapan+Computer)/@-6.939962,107.755911,16z/data=!4m6!3m5!1s0x2e68c3bcc94508df:0x8c0b5d1fbca9356a!8m2!3d-6.9376002!4d107.7579419!16s%2Fg%2F11hg47c59t?hl=id&entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1089332896304!2d107.5386862!3d-6.877550599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c31c4e5a1f7d%3A0xf0f17c2dfa8de480!2sService%20laptop%20cimahi%20bisa%20di%20tunggu%20(abah%20laptop)!5e0!3m2!1sid!2sid!4v1769241340946!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a href="https://www.google.com/maps/place/Service+laptop+cimahi+bisa+di+tunggu+(abah+laptop)/@-6.8775506,107.5386862,17z/data=!4m16!1m9!3m8!1s0x2e68c31c4e5a1f7d:0xf0f17c2dfa8de480!2sService+laptop+cimahi+bisa+di+tunggu+(abah+laptop)!8m2!3d-6.8775506!4d107.5386862!9m1!1b1!16s%2Fg%2F11jmpxx3ky!3m5!1s0x2e68c31c4e5a1f7d:0xf0f17c2dfa8de480!8m2!3d-6.8775506!4d107.5386862!16s%2Fg%2F11jmpxx3ky?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D"
         target="_blank" class="map-overlay"></a>
     </div>
   </section>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/085173003100?text=Halo%20BABACOM%2C%20saya%20ingin%20konsultasi%20tentang%20service%20laptop"
+  <a href="https://wa.me/6285133440061?text=Halo%20saya%20ingin%20service%20laptop"
     class="wa-float" target="_blank">
     <img src="./aset/WhatsApp.svg" alt="WA">
   </a>
   <div class="wa-label">Chat Whatsapp</div>
 
-  <footer>© 2025 BABACOM Bandung. Semua hak cipta dilindungi.</footer>
+  <footer>© 2026 ABAH LAPTOP CIMAHI</footer>
 
   <script>
     // Fade-in animation
@@ -714,8 +1342,56 @@
       });
     });
     fades.forEach(el => observer.observe(el));
+    document.querySelectorAll('.carousel-container').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
 
-    // Testimonial slider
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    startAutoSlide();
+  });
+  
+   // Testimonial slider
     const slides = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.dot');
     let current = 0;
@@ -734,7 +1410,6 @@
 
     let autoSlide = setInterval(nextSlide, 4000);
 
-    // Click dots manually
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         clearInterval(autoSlide);
@@ -743,36 +1418,6 @@
         autoSlide = setInterval(nextSlide, 4000);
       });
     });
-
-    // Carousel Tentang Kami
-    const aboutSlides = document.querySelectorAll(".carousel-slide");
-    const aboutDots = document.querySelectorAll(".carousel-dots .dot");
-    let aboutIndex = 0;
-
-    function showAboutSlide(n) {
-      aboutSlides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === n);
-        aboutDots[i].classList.toggle("active", i === n);
-      });
-    }
-
-    function nextAboutSlide() {
-      aboutIndex = (aboutIndex + 1) % aboutSlides.length;
-      showAboutSlide(aboutIndex);
-    }
-
-    let aboutAuto = setInterval(nextAboutSlide, 4000);
-
-    // klik manual via dot
-    aboutDots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        clearInterval(aboutAuto);
-        showAboutSlide(i);
-        aboutIndex = i;
-        aboutAuto = setInterval(nextAboutSlide, 4000);
-      });
-    });
-
   </script>
 </body>
 
