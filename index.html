@@ -527,6 +527,65 @@
 .logo img {
   height: 32px;
 }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+/* menu normal (desktop) */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin-bottom: 10px;
+  }
+
+  .nav-menu li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
   </style>
   
     <link rel="icon" type="image/png" href="aset/logo-abah.jpg">
@@ -535,13 +594,14 @@
 <body>
 
   <header>
-    <nav>
+    <nav class="navbar">
       <!-- <h1>ABAH LAPTOP</h1> -->
        <a href="#home" class="logo">
         <img src="./aset/logo-abah.jpg" alt="ABAH LAPTOP">
         <span>ABAH LAPTOP</span>
       </a>
-      <ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Layanan</a></li>
         <!-- <li><a href="#services">Layanan</a></li> -->
@@ -1418,6 +1478,10 @@
         autoSlide = setInterval(nextSlide, 4000);
       });
     });
+
+    function toggleMenu() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+  }
   </script>
 </body>
 
